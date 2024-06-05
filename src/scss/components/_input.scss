@@ -1,0 +1,20 @@
+.search-box-input {
+  @include typography($font-size-16, $regular-400, $primary-color);
+  height: 52px;
+  width: 80%;
+  padding: $spacing-14 $spacing-16 $spacing-14 $spacing-10;
+  border-width: $spacing-0;
+//   border-radius: $spacing-0 $border-radius $border-radius $spacing-0;
+border-radius: $spacing-40;
+  outline: none;
+  // background-color: $tertiary-color;
+  backdrop-filter: $bg-filter;
+  background-color: $bg-transparent;
+  &::placeholder {
+    // @include typography($font-size-16, $regular-400, $accent-color);
+    @include typography($font-size-16, $regular-400, $dark-secondary);
+  }
+  &:focus {
+    box-shadow: inset;
+  }
+}

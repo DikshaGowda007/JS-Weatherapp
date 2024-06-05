@@ -1,0 +1,29 @@
+.search-box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  min-width: 56px;
+//   padding: $spacing-14 $spacing-16;
+  border-radius: $border-radius;
+//   background-color: $tertiary-color;
+  cursor: pointer;
+//   transition: transform 0.2s;
+position: absolute;
+right: 18%;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+//   &:focus-visible {
+//     outline: none;
+//     transform: scale(0.98);
+//   }
+
+}
+@include media-query("xsmall") {
+  .search-box-icon {
+    right: 12%;
+  }
+}

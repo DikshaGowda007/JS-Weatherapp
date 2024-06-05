@@ -1,0 +1,1422 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.header .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .header .search-box {
+    order: 1;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  .header > *:nth-child(2) {
+    margin-right: 0px;
+  }
+  .header > *:nth-last-child(2) {
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header > *:last-child {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .header > *:nth-last-child(2) {
+    width: 56px;
+    flex-shrink: 0;
+    margin-right: 0px;
+  }
+}
+
+.search-box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  min-width: 56px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  right: 18%;
+}
+.search-box-icon:hover {
+  transform: scale(0.98);
+}
+
+@media screen and (max-width: 320px) {
+  .search-box-icon {
+    right: 12%;
+  }
+}
+.current-weather-section .current-weather-container .current-weather-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  padding: 18px 20px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background-color: var(--tertiary);
+}
+.current-weather-section .current-weather-container .current-weather-card .current-weather-icon {
+  min-height: 96px;
+  min-width: 96px;
+  height: 96px;
+  width: 96px;
+  margin: 14px 16px;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-weather-temperature {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--primary);
+  text-transform: capitalize;
+  width: auto;
+  margin: 14px 16px;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-weather-description {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--primary);
+  text-transform: capitalize;
+  width: auto;
+  margin: 0px 16px 14px 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #0f172a;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-location-container {
+  display: flex;
+  align-items: center;
+  margin: 14px 16px;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-location-container svg {
+  min-height: 24px;
+  min-width: 24px;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-location-container svg path {
+  stroke: var(--primary);
+}
+.current-weather-section .current-weather-container .current-weather-card .current-location-container .current-location {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--primary);
+  text-transform: capitalize;
+  width: 100%;
+  margin-left: 12px;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-date-container {
+  display: flex;
+  align-items: center;
+  margin: 0px 16px 14px 16px;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-date-container svg {
+  min-height: 24px;
+  min-width: 24px;
+}
+.current-weather-section .current-weather-container .current-weather-card .current-date-container svg path {
+  fill: var(--primary);
+}
+.current-weather-section .current-weather-container .current-weather-card .current-date-container .current-date {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--primary);
+  text-transform: capitalize;
+  width: 100%;
+  margin-left: 12px;
+}
+
+.heading {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--primary);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 40px 0px;
+}
+
+.hourly-weather-forecast-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  padding: 16px 20px 0 20px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 380px;
+}
+.hourly-weather-forecast-section .hourly-weather-forecast-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 24px 10px 24px;
+}
+.hourly-weather-forecast-section .hourly-weather-forecast-card .hourly-weather-forecast-date-time {
+  width: 100%;
+  margin-right: 12px;
+}
+.hourly-weather-forecast-section .hourly-weather-forecast-card .hourly-weather-forecast-date-time .hourly-weather-forecast-date {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--accent);
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+.hourly-weather-forecast-section .hourly-weather-forecast-card .hourly-weather-forecast-date-time .hourly-weather-forecast-time {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--primary);
+  text-transform: capitalize;
+}
+.hourly-weather-forecast-section .hourly-weather-forecast-card .hourly-weather-forecast-temperature {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--primary);
+  text-transform: capitalize;
+}
+
+.current-weather-description-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin: 0 50px;
+  border-radius: 14px;
+  height: 100%;
+}
+.current-weather-description-container .weather-desc-left,
+.current-weather-description-container .weather-desc-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: 32px 40px 0 40px;
+}
+.current-weather-description-container .weather-desc-left .wind-speed-card,
+.current-weather-description-container .weather-desc-left .pressure-card,
+.current-weather-description-container .weather-desc-left .sunrise-card,
+.current-weather-description-container .weather-desc-left .humidity-card,
+.current-weather-description-container .weather-desc-left .visibility-card,
+.current-weather-description-container .weather-desc-left .sunset-card,
+.current-weather-description-container .weather-desc-right .wind-speed-card,
+.current-weather-description-container .weather-desc-right .pressure-card,
+.current-weather-description-container .weather-desc-right .sunrise-card,
+.current-weather-description-container .weather-desc-right .humidity-card,
+.current-weather-description-container .weather-desc-right .visibility-card,
+.current-weather-description-container .weather-desc-right .sunset-card {
+  display: flex;
+  align-items: flex-end;
+  margin: 20px 0;
+}
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-icon,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-icon,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-icon,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-icon,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-icon,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-icon,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-icon,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-icon,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-icon,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-icon,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-icon,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-icon,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-icon,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-icon,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-icon,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-icon,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-icon,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-icon,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-icon,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-icon,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-icon,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-icon,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-icon,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-icon,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-icon,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-icon,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-icon,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-icon,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-icon,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-icon,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-icon,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-icon,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-icon,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-icon,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-icon,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-icon,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-icon,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-icon,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-icon,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-icon,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-icon,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-icon,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-icon,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-icon,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-icon,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-icon,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-icon,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-icon,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-icon,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-icon,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-icon,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-icon,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-icon,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-icon,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-icon,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-icon,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-icon,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-icon,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-icon,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-icon,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-icon {
+  height: 48px;
+  width: 48px;
+}
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .sunset-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .wind-speed-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .pressure-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .sunrise-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .humidity-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .visibility-title,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .sunset-title {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--accent);
+  text-transform: capitalize;
+}
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-left .wind-speed-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-left .pressure-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-left .pressure-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-left .pressure-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-left .pressure-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-left .pressure-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunrise-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-left .humidity-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-left .humidity-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-left .humidity-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-left .humidity-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-left .humidity-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-left .visibility-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-left .visibility-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-left .visibility-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-left .visibility-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-left .visibility-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunset-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunset-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunset-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunset-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-left .sunset-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-right .wind-speed-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-right .pressure-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-right .pressure-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-right .pressure-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-right .pressure-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-right .pressure-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunrise-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-right .humidity-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-right .humidity-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-right .humidity-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-right .humidity-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-right .humidity-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-right .visibility-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-right .visibility-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-right .visibility-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-right .visibility-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-right .visibility-card .sunset-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunset-card .wind-speed-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunset-card .pressure-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunrise-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunset-card .humidity-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunset-card .visibility-details .sunset-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .wind-speed-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .pressure-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .sunrise-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .humidity-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .visibility-value,
+.current-weather-description-container .weather-desc-right .sunset-card .sunset-details .sunset-value {
+  margin-top: 6px;
+  font-weight: 400;
+}
+.search-box-input {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--primary);
+  text-transform: capitalize;
+  height: 52px;
+  width: 80%;
+  padding: 14px 16px 14px 10px;
+  border-width: 0px;
+  border-radius: 40px;
+  outline: none;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.search-box-input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+.search-box-input:focus {
+  box-shadow: inset;
+}
+
+html .main-container,
+body .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 130px 0 130px;
+}
+html .main-container .current-weather-section,
+body .main-container .current-weather-section {
+  display: flex;
+  width: 100%;
+  height: 390px;
+}
+html .main-container .current-weather-section > :first-child,
+body .main-container .current-weather-section > :first-child {
+  width: calc((100% - 48px) / 4);
+}
+html .main-container .current-weather-section > *:last-child,
+body .main-container .current-weather-section > *:last-child {
+  margin-right: 0px;
+}
+@media screen and (max-width: 1200px) {
+  html .main-container .current-weather-section > *,
+  body .main-container .current-weather-section > * {
+    width: calc((100% - 16px) / 2);
+  }
+  html .main-container .current-weather-section > *:nth-child(n),
+  body .main-container .current-weather-section > *:nth-child(n) {
+    margin-bottom: 16px;
+  }
+  html .main-container .current-weather-section > *:nth-child(2n),
+  body .main-container .current-weather-section > *:nth-child(2n) {
+    margin-right: 0px;
+  }
+  html .main-container .current-weather-section > *:nth-last-child(-n+2),
+  body .main-container .current-weather-section > *:nth-last-child(-n+2) {
+    margin-bottom: 0px;
+  }
+  html .main-container .current-weather-section > *:nth-child(3),
+  body .main-container .current-weather-section > *:nth-child(3) {
+    order: 1;
+    margin-right: 0px;
+    margin-left: 16px;
+  }
+}
+@media screen and (max-width: 425px) {
+  html .main-container .current-weather-section > *,
+  body .main-container .current-weather-section > * {
+    width: 100%;
+  }
+  html .main-container .current-weather-section > *:nth-child(n),
+  body .main-container .current-weather-section > *:nth-child(n) {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 16px;
+  }
+  html .main-container .current-weather-section > *:nth-child(3),
+  body .main-container .current-weather-section > *:nth-child(3) {
+    order: 0;
+  }
+  html .main-container .current-weather-section > *:last-child,
+  body .main-container .current-weather-section > *:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  html .main-container .current-weather-section,
+  body .main-container .current-weather-section {
+    flex-wrap: wrap;
+  }
+}
+html .main-container .daily-forecast-section,
+body .main-container .daily-forecast-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  html .main-container .daily-forecast-section,
+  body .main-container .daily-forecast-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 992px) {
+  html .main-container .daily-forecast-section,
+  body .main-container .daily-forecast-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 425px) {
+  html .main-container .daily-forecast-section,
+  body .main-container .daily-forecast-section {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 1200px) {
+  html .main-container,
+  body .main-container {
+    padding: 32px 50px;
+  }
+}
+@media screen and (max-width: 992px) {
+  html .main-container,
+  body .main-container {
+    padding: 24px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html .main-container,
+  body .main-container {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 425px) {
+  html .main-container,
+  body .main-container {
+    padding: 16px 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
