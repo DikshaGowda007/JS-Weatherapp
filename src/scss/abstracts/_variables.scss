@@ -12,50 +12,6 @@ $bg-transparent: rgba(255, 255, 255, 0.1);
 
 $bg-filter: blur(10px);
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --primary: #{$light-primary};
-    --secondary: #{$light-secondary};
-    --tertiary: #{$light-tertiary};
-    --accent: #{$light-accent};
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #{$dark-primary};
-    --secondary: #{$dark-secondary};
-    --tertiary: #{$dark-tertiary};
-    --accent: #{$dark-accent};
-
-    img {
-      filter: brightness(100);
-    }
-  }
-}
-
-html.light {
-  --primary: #{$light-primary};
-  --secondary: #{$light-secondary};
-  --tertiary: #{$light-tertiary};
-  --accent: #{$light-accent};
-
-  img {
-    filter: none;
-  }
-}
-
-html.dark {
-  --primary: #{$dark-primary};
-  --secondary: #{$dark-secondary};
-  --tertiary: #{$dark-tertiary};
-  --accent: #{$dark-accent};
-
-  img {
-    filter: brightness(100);
-  }
-}
-
 $primary-color: var(--primary);
 $secondary-color: var(--secondary);
 $tertiary-color: var(--tertiary);

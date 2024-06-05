@@ -4,8 +4,7 @@
       @include flex-weather-card-container;
       height: auto;
       padding: $spacing-18 $spacing-20;
-      border: $line-weight solid $primary-color;
-      border-radius: $border-radius;
+      border-radius: $spacing-14;
       background-color: $bg-transparent;
       backdrop-filter: $bg-filter;
 

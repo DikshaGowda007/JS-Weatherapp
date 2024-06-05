@@ -1,36 +1,35 @@
 .hourly-weather-forecast-section {
   @include flex-container;
-height: auto;
-padding: $spacing-16 $spacing-20;
-border-radius: $border-radius;
-//   background-color: $tertiary-color;
-backdrop-filter: $bg-filter;
+  height: auto;
+  padding: $spacing-16 $spacing-20 0 $spacing-20;
+  border-radius: $spacing-14;
+  backdrop-filter: $bg-filter;
 
-background-color: $bg-transparent;
-border: 1px solid black;
+  background-color: $bg-transparent;
+  height: 380px;
 
-.hourly-weather-forecast-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: $spacing-14 $spacing-20;
+  .hourly-weather-forecast-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: $spacing-10 $spacing-24 $spacing-10 $spacing-24;
 
-  .hourly-weather-forecast-date-time {
-    width: 100%;
-    margin-right: $spacing-12;
+    .hourly-weather-forecast-date-time {
+      width: 100%;
+      margin-right: $spacing-12;
 
-    .hourly-weather-forecast-date {
-      @include typography($font-size-14, $regular-400, $accent-color);
-      margin-bottom: $spacing-6;
+      .hourly-weather-forecast-date {
+        @include typography($font-size-14, $regular-400, $accent-color);
+        margin-bottom: $spacing-6;
+      }
+
+      .hourly-weather-forecast-time {
+        @include typography($font-size-16, $regular-400, $primary-color);
+      }
     }
 
-    .hourly-weather-forecast-time {
-      @include typography($font-size-16, $regular-400, $primary-color);
+    .hourly-weather-forecast-temperature {
+      @include typography($font-size-16, $medium-500, $primary-color);
     }
   }
-
-  .hourly-weather-forecast-temperature {
-    @include typography($font-size-16, $medium-500, $primary-color);
-  }
-}
 }
