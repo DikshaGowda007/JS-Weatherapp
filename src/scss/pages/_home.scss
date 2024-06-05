@@ -1,46 +1,22 @@
 html,
 body {
-  // @include flex-container;
-  // // display: flex;
-  // // flex-direction: column;
-  // // align-items: center;
-  // // width: 100%;
-  // background-color: $secondary-color;
-  //   padding: $spacing-40 $grid-margin-xlarge;
-  //   max-width: 1200px;
-  //   user-select: none;
-    .main-container {
-      @include flex-container;
-      // background: url('//okay/img/mist.jpg');
-      // background: url("/img/cloud.jpg");
-    // background: url('//okay/img/b/clear.jpg');
-    // background: grey;
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      // width: 100%;
-      // background-color: $secondary-color;
-      
-      // background-color: $bg-transparent;
-        // padding: $spacing-40 $grid-margin-xlarge;
-        // padding: 80px 130px;
-        padding: 30px 130px 0 130px;
-        // max-width: 1200px;
-        // background-color: red;
-        // user-select: none;
+  @include flex-container;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // width: 100%;
+  background-color: $secondary-color;
+    padding: $spacing-40 $grid-margin-xlarge;
+    max-width: 1200px;
+    user-select: none;
 
     .current-weather-section {
       display: flex;
       width: 100%;
-      height: 390px;
-
-      & > :first-child {
-        width: calc((100% - 48px) / 4);
-      }
 
 
       & > * {
-        // width: calc((100% - 48px) / 4);
+        width: calc((100% - 48px) / 4);
         // margin-right: $spacing-16;
 
         &:last-child {
@@ -129,5 +105,4 @@ body {
       padding: $spacing-16 $grid-margin-xsmall;
     }
 
-}
 }
