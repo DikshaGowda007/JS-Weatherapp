@@ -1,22 +1,40 @@
 html,
 body {
-  @include flex-container;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // width: 100%;
-  background-color: $secondary-color;
-    padding: $spacing-40 $grid-margin-xlarge;
-    max-width: 1200px;
-    user-select: none;
+  // @include flex-container;
+  // // display: flex;
+  // // flex-direction: column;
+  // // align-items: center;
+  // // width: 100%;
+  // background-color: $secondary-color;
+  //   padding: $spacing-40 $grid-margin-xlarge;
+  //   max-width: 1200px;
+  //   user-select: none;
+    .main-container {
+      @include flex-container;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // width: 100%;
+      // background-color: $secondary-color;
+      
+      // background-color: $bg-transparent;
+        // padding: $spacing-40 $grid-margin-xlarge;
+        padding: 80px 130px;
+        // max-width: 1200px;
+        // background-color: red;
+        user-select: none;
 
     .current-weather-section {
       display: flex;
       width: 100%;
 
+      & > :first-child {
+        width: calc((100% - 48px) / 4);
+      }
+
 
       & > * {
-        width: calc((100% - 48px) / 4);
+        // width: calc((100% - 48px) / 4);
         // margin-right: $spacing-16;
 
         &:last-child {
@@ -105,4 +123,5 @@ body {
       padding: $spacing-16 $grid-margin-xsmall;
     }
 
+}
 }

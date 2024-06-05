@@ -69,10 +69,17 @@
 
 .current-weather-description-container {
     @include flex-card-row;
-    // border: 1px solid black;
+    // background-color: $tertiary-color;
+    
+    background-color: $bg-transparent;
+    backdrop-filter: $bg-filter;
+    border: 1px solid black;
+    margin: 0 50px;
+    // width: 100%;
     
     // margin: $spacing-10 $spacing-10 $spacing-10 $spacing-10;
-    margin: $spacing-12 $spacing-100;
+    // margin: $spacing-12 $spacing-100;
+    // width: 100%;
 
     .weather-desc-left,
     .weather-desc-right {
@@ -83,7 +90,8 @@
         justify-content: space-evenly;
         align-items: center;
         height: auto;
-        margin: 0 $spacing-32;
+        // margin: 0 $spacing-32;
+        margin: $spacing-32 $spacing-40;
 
         .wind-speed-card,
         .pressure-card,
@@ -93,13 +101,14 @@
         .sunset-card {
             display: flex;
             // align-items: center;
-            align-items: flex-start;
+            align-items: flex-end;
             height: 100%;
             // padding: $spacing-16 $spacing-20;
             // border-radius: $border-radius;
             // background-color: $tertiary-color;
             // margin: $spacing-24;
-            margin-right: $spacing-20;
+            // margin-right: $spacing-20;
+            margin: $spacing-20 0;
 
             .wind-speed-icon,
             .pressure-icon,
@@ -120,7 +129,7 @@
                   display: flex;
                   flex-direction: column;
                   width: 100%;
-                  margin-left: $spacing-6;
+                //   margin-left: $spacing-6;
                 // margin: $spacing-18;
 
                 .wind-speed-title,

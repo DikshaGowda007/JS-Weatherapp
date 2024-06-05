@@ -6,7 +6,8 @@
       padding: $spacing-18 $spacing-20;
       border: $line-weight solid $primary-color;
       border-radius: $border-radius;
-      background-color: $tertiary-color;
+      background-color: $bg-transparent;
+      backdrop-filter: $bg-filter;
 
       .current-weather-icon {
         min-height: 96px;
