@@ -1,12 +1,13 @@
 .hourly-weather-forecast-section {
   @include flex-container;
   height: auto;
-  padding: $spacing-16 $spacing-20 0 $spacing-20;
+  padding: $spacing-16 $spacing-20 $spacing-20 $spacing-20;
   border-radius: $spacing-14;
   backdrop-filter: $bg-filter;
 
   background-color: $bg-transparent;
-  height: 380px;
+  // height: 380px;
+  height: fit-content;
 
   .hourly-weather-forecast-card {
     display: flex;

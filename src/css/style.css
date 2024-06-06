@@ -90,6 +90,7 @@
   font-weight: 500;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
   width: auto;
   margin: 14px 16px;
 }
@@ -100,6 +101,7 @@
   font-weight: 400;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
   width: auto;
   margin: 0px 16px 14px 16px;
   padding-bottom: 18px;
@@ -124,6 +126,7 @@
   font-weight: 400;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
   width: 100%;
   margin-left: 12px;
 }
@@ -146,6 +149,7 @@
   font-weight: 400;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
   width: 100%;
   margin-left: 12px;
 }
@@ -157,6 +161,7 @@
   font-weight: 400;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,11 +173,11 @@
   flex-direction: column;
   justify-content: center;
   height: auto;
-  padding: 16px 20px 0 20px;
+  padding: 16px 20px 20px 20px;
   border-radius: 14px;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.1);
-  height: 380px;
+  height: fit-content;
 }
 .hourly-weather-forecast-section .hourly-weather-forecast-card {
   display: flex;
@@ -191,6 +196,7 @@
   font-weight: 400;
   color: var(--accent);
   text-transform: capitalize;
+  filter: brightness(1.75);
   margin-bottom: 6px;
 }
 .hourly-weather-forecast-section .hourly-weather-forecast-card .hourly-weather-forecast-date-time .hourly-weather-forecast-time {
@@ -200,6 +206,7 @@
   font-weight: 400;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
 }
 .hourly-weather-forecast-section .hourly-weather-forecast-card .hourly-weather-forecast-temperature {
   font-family: "Inter", sans-serif;
@@ -208,6 +215,7 @@
   font-weight: 500;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
 }
 
 .current-weather-description-container {
@@ -218,7 +226,7 @@
   backdrop-filter: blur(10px);
   margin: 0 50px;
   border-radius: 14px;
-  height: 100%;
+  height: fit-content;
 }
 .current-weather-description-container .weather-desc-left,
 .current-weather-description-container .weather-desc-right {
@@ -226,7 +234,7 @@
   flex-direction: column;
   align-items: center;
   height: auto;
-  margin: 32px 40px 0 40px;
+  margin: 40px 46px;
 }
 .current-weather-description-container .weather-desc-left .wind-speed-card,
 .current-weather-description-container .weather-desc-left .pressure-card,
@@ -833,6 +841,7 @@
   font-weight: 400;
   color: var(--accent);
   text-transform: capitalize;
+  filter: brightness(1.75);
 }
 .current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .wind-speed-value,
 .current-weather-description-container .weather-desc-left .wind-speed-card .wind-speed-details .pressure-value,
@@ -1276,6 +1285,7 @@
   font-weight: 400;
   color: var(--primary);
   text-transform: capitalize;
+  filter: brightness(1.75);
   height: 52px;
   width: 80%;
   padding: 14px 16px 14px 10px;
@@ -1292,17 +1302,20 @@
   font-weight: 400;
   color: #0f172a;
   text-transform: capitalize;
+  filter: brightness(1.75);
 }
 .search-box-input:focus {
-  box-shadow: inset;
-  background-color: aliceblue;
+  background-color: white;
+  box-shadow: inset 0 0 5px transparent, 0 0 5px black;
 }
 
+body {
+  background: url("/src/images/clear.jpg");
+}
 body .main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("/img/b/clear.jpg");
   padding: 30px 130px 0 130px;
 }
 body .main-container .current-weather-section {

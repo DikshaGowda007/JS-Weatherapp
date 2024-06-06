@@ -8,11 +8,14 @@ border-radius: $spacing-40;
   outline: none;
   backdrop-filter: $bg-filter;
   background-color: $bg-transparent;
+  
+  // background-color: white;
   &::placeholder {
     @include typography($font-size-16, $regular-400, $dark-secondary);
   }
   &:focus {
-    box-shadow: inset;
-    background-color: aliceblue;
+    // box-shadow: inset;
+    background-color: white;
+    box-shadow: inset 0 0 5px transparent, 0 0 5px black;
   }
 }

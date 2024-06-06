@@ -108,11 +108,9 @@ const getCurrentWeather = (locationData) => {
   let apiUrl;
 
   if (latitude && longitude) {
-    apiUrl = `${weatherApi.baseUrl}weather?lat=${latitude}&lon=${longitude}&appid=${weatherApi.API_KEY}`;
+    apiUrl = `${weatherApi.baseUrl}weather?lat=${latitude}&lon=${longitude}&appid=${weatherApi.API_KEY}&units=metric`;
   } else {
-    // apiUrl = `${weatherApi.baseUrl}weather?q=${locationData}&appid=${weatherApi.API_KEY}&units=metric`;
-    apiUrl = `${weatherApi.baseUrl}weather?q=${searchValue}&appid=${weatherApi.API_KEY}`;
-    // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+    apiUrl = `${weatherApi.baseUrl}weather?q=${searchValue}&appid=${weatherApi.API_KEY}&units=metric`;
   }
 
   return fetch(apiUrl)
@@ -154,7 +152,7 @@ const displayWeather = (data) => {
   console.log(`temp ${temp}`)
 
   const currentWeatherIcon = document.querySelector(".current-weather-icon");
-  currentWeatherIcon.src = `http://openweathermap.org/img/b/w/${icon}.png`;
+  currentWeatherIcon.src = `http://openweathermap.org/img/w/${icon}.png`;
   const currentWeatherTemperature = document.querySelector(
     ".current-weather-temperature"
   );
@@ -282,7 +280,7 @@ const createWeatherCards = () => {
     dailyForecastWeatherDetails.appendChild(dailyWeatherForecastTemperature);
     dailyForecastWeatherDetails.appendChild(dailyWeatherForecastDescription);
     dailyWeatherForecastCard.appendChild(dailyForecastWeatherDetails);
-    dailyForecastSection.appendChild(dailyWeatherForecastCard);
+    // dailyForecastSection.appendChild(dailyWeatherForecastCard);
   }
 };
 // Hourly forecast display data
@@ -364,7 +362,7 @@ const displayWeatherForecastData = (data) => {
     );
     dailyWeatherForecastIcon[
       index
-    ].src = `src/img/b/static/${data.list[index].weather[0].icon}.svg`;
+    ].src = `src/images/static/${data.list[index].weather[0].icon}.svg`;
     dailyWeatherForecastTemperature[index].innerHTML = roundDegree(
       data.list[index].main.temp
     );
@@ -379,25 +377,25 @@ const displayWeatherForecastData = (data) => {
 //   const container = document.querySelector(".main-container");
 
 //   if (data.weather[0].description == "Clear") {
-//     container.style.backgroundImage = "url('./img/b/clear.jpg')";
+//     container.style.backgroundImage = "url('src/images/clear.jpg')";
 //     // /img/
 //   } else if (data.weather[0].description == "Clouds") {
-//     container.style.backgroundImage = "url('./img/b/clouds.jpg')";
+//     container.style.backgroundImage = "url('src/images/clouds.jpg')";
 //   } else if (data.weather[0].description == "haze") {
-//     // container.style.backgroundImage = "url('./img/b/haze.jpg')";
-//     // container.style.backgroundImage = "url('./img/b/clear.jpg')";
-//     container.style.backgroundImage = "url('./img/b/clear.jpg')";
+//     // container.style.backgroundImage = "url('src/images/haze.jpg')";
+//     // container.style.backgroundImage = "url('src/images/clear.jpg')";
+//     container.style.backgroundImage = "url('src/images/clear.jpg')";
 //     // console.log("kugbki");
 //   } else if (data.weather[0].description == "Rain") {
-//     container.style.backgroundImage = "url('./img/b/rain.jpg')";
+//     container.style.backgroundImage = "url('src/images/rain.jpg')";
 //   } else if (data.weather[0].description == "Snow") {
-//     container.style.backgroundImage = "url('./img/b/snow.jpg')";
+//     container.style.backgroundImage = "url('src/images/snow.jpg')";
 //   } else if (data.weather[0].description == "Thunderstorm") {
-//     container.style.backgroundImage = "url('./img/b/thunderstorm.jpg')";
+//     container.style.backgroundImage = "url('src/images/thunderstorm.jpg')";
 //   } else if (data.weather[0].description == "Mist") {
-//     container.style.backgroundImage = "url('./img/b/mist.jpg')";
+//     container.style.backgroundImage = "url('src/images/mist.jpg')";
 //   } else if (data.weather[0].description == "Drizzle") {
-//     container.style.backgroundImage = "url('./img/b/rain.jpg')";
+//     container.style.backgroundImage = "url('src/images/rain.jpg')";
 //   }
 // };
 
@@ -405,27 +403,39 @@ const displayWeatherForecastData = (data) => {
 const changeBgImage = (data) => {
   // console.log(data.weather[0].description);
   const container = document.querySelector(".main-container");
+  // console.log(container.style.backgroundImage)
+  // console.log(document.body.style.backgroundImage)
+  // alert(document.body.style.backgroundImage)
 
   if (data.weather[0].main == "Clear") {
-    container.style.backgroundImage = "url('./img/b/clear.jpg')";
+    // container.style.backgroundImage = "url('src/images/clear.jpg')";
+    document.body.style.backgroundImage = "url('src/images/clear.jpg')";
     // /img/
   } else if (data.weather[0].main == "Clouds") {
-    container.style.backgroundImage = "url('./img/b/clouds.jpg')";
+    // container.style.backgroundImage = "url('src/images/clouds.jpg')";
+    document.body.style.backgroundImage = "url('src/images/cloud.jpg')";
+    
   } else if (data.weather[0].main == "haze") {
-    container.style.backgroundImage = "url('./img/b/haze.jpg')";
-    // container.style.backgroundImage = "url('./img/b/clear.jpg')";
-    // container.style.backgroundImage = "url('./img/b/clear.jpg')";
+    // container.style.backgroundImage = "url('src/images/haze.jpg')";
+    document.body.style.backgroundImage = "url('src/images/haze.jpg')";
+    // container.style.backgroundImage = "url('src/images/clear.jpg')";
+    // container.style.backgroundImage = "url('src/images/clear.jpg')";
     // console.log("kugbki");
   } else if (data.weather[0].main == "Rain") {
-    container.style.backgroundImage = "url('./img/b/rain.jpg')";
+    // container.style.backgroundImage = "url('src/images/rain.jpg')";
+    document.body.style.backgroundImage = "url('src/images/rain.jpg')";
   } else if (data.weather[0].main == "Snow") {
-    container.style.backgroundImage = "url('./img/b/snow.jpg')";
+    // container.style.backgroundImage = "url('src/images/snow.jpg')";
+    document.body.style.backgroundImage = "url('src/images/snow.jpg')";
   } else if (data.weather[0].main == "Thunderstorm") {
-    container.style.backgroundImage = "url('./img/b/thunderstorm.jpg')";
+    // container.style.backgroundImage = "url('src/images/thunderstorm.jpg')";
+    // container.style.backgroundImage = "url('src/images/thunderstorm.jpg')";
   } else if (data.weather[0].main == "Mist") {
-    container.style.backgroundImage = "url('./img/b/mist.jpg')";
+    // container.style.backgroundImage = "url('src/images/mist.jpg')";
+    document.body.style.backgroundImage = "url('src/images/mist.jpg')";
   } else if (data.weather[0].main == "Drizzle") {
-    container.style.backgroundImage = "url('./img/b/rain.jpg')";
+    // container.style.backgroundImage = "url('src/images/rain.jpg')";
+    document.body.style.backgroundImage = "url('src/images/rain.jpg')";
   }
 };
 

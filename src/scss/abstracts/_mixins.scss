@@ -5,6 +5,7 @@
   font-weight: $font-weight;
   color: $font-color;
   text-transform: capitalize;
+  filter: brightness(1.75);
 }
 
 @mixin media-query($breakpoint) {

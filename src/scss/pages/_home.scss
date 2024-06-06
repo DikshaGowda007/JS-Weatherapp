@@ -1,7 +1,9 @@
 body {
+  background: url("/src/images/clear.jpg");
     .main-container {
       @include flex-container;
-    background: url("/img/b/clear.jpg");
+    // background: url("/img/b/clear.jpg");
+    // background: url("/src/images/clear.jpg");
         padding: 30px 130px 0 130px;
 
     .current-weather-section {
